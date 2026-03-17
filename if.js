@@ -104,7 +104,7 @@ function clickBolo30(){
   window.location.replace("folders/index13.html");
 }
 function clickBolo31(){
-  window.location.replace("folders/index26.html");
+  window.location.replace("index26.html");
 }
 function clickBolo32(){
   window.location.replace("folders/index26.html");
