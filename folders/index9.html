@@ -17,7 +17,11 @@
 <body>
     <div class="container" data-aos="flip-up">
         <div class="card1">
-        <img src="../imagens/ganache.jpeg" alt="cocada">
+            <div class="carousel">
+        <div class="carousel-track">
+          <img src="../imagens/ganache.jpeg" alt="cocada" style="width: 500px;">
+         <img src="../imagens/cenoura.jpeg" alt="Imagem 2" style="width: 500px;">
+        </div>
         <h1 id="tags">Bolo com cobertura <br> foundant pintado</h1>  
             <h3><b>P: R$ 48,00 (700G)</b></h3>
             <h3><b>M: R$ 85,00 (1,5Kg)</b></h3>
@@ -28,6 +32,7 @@
             <h3><b>-Amanteigada</b></h3>
             <h3><b>-Marmorizada</b></h3>
             <h3><b>-Chocolate</b></h3>
+            <h3><b>-Cenoura com Chocolate</b></h3>
         <button id="botao" onmouseup="window.location.replace('indexcard.html')">Voltar</a></button>
         </div>
     </div>
@@ -39,6 +44,22 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
   AOS.init();
+</script>
+<script>
+    const track = document.querySelector('.carousel-track');
+  const images = document.querySelectorAll('.carousel img');
+
+  let index = 0;
+
+  setInterval(() => {
+    index++;
+
+    if (index >= images.length) {
+      index = 0;
+    }
+
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000);
 </script>
 </body>
 </html>
