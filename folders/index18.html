@@ -17,7 +17,13 @@
 <body>
     <div class="container" data-aos="flip-up">
         <div class="card1">
-        <img src="../imagens/kit2.png" alt="cocada">
+        <div class="carousel">
+                    <div class="carousel-track">
+                    <img src="../imagens/kitafetoatualizado1.jpeg" alt="Imagem 2">
+                    <img src="../imagens/kitafetoatualizado2.jpeg" alt="Imagem 1">
+                    <img src="../imagens/kitafetoatualizado3.jpeg" alt="Imagem 3">
+                    </div>
+                </div>
         <h1 id="tags">Kit afeto</h1>  
         <h2><b></b></h2>
         <h3><b>Embalagem com duas xícaras de <br>porcelana pintadas e bolo "P" <br>em cobertura foundant pintado.</b></h3>
@@ -34,6 +40,22 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
   AOS.init();
+</script>
+<script>
+  const track = document.querySelector('.carousel-track');
+  const images = document.querySelectorAll('.carousel img');
+
+  let index = 0;
+
+  setInterval(() => {
+    index++;
+
+    if (index >= images.length) {
+      index = 0;
+    }
+
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000); // troca a cada 3 segundos
 </script>
 </body>
 </html>
